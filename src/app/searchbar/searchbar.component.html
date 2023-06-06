@@ -1,0 +1,15 @@
+
+<div class="searchbar">
+    <input type="text" placeholder="Search People" [(ngModel)]="searchPeople">
+</div>
+<ul class="user-list">
+  <li class="user-list__item" *ngFor="let person of people  | filter: searchPeople">
+    <div class="user-list__avtar">
+      <img [src]="person.picture.medium" alt="Profile Picture">
+    </div>
+    <div class="user-list__details">
+        <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
+      <span>{{ person.cell }}</span>
+    </div>
+  </li>
+</ul>

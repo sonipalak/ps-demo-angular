@@ -1,0 +1,22 @@
+<p>Demo Componente</p>
+<a href="javascript:void()" routerLink="">Back to Dashboard</a>
+
+
+<h1>PIPE</h1>
+<p>Product Price: {{price | currency: "INR"}}</p>
+<p>Date: {{today | date:'longDate'}}</p>
+
+<button class="" (click)="countAdd()" [ngClass]="status ? 'success' : 'danger'">Link | {{count}}</button>
+
+
+<h1>Pass Date Child Component</h1>
+<app-child [item]="data" [proName]="productName" [proDetails]="productDetails"></app-child>
+<button (click)="updateVale()">Update Child</button>
+
+
+<h1>Send data child to parent component</h1>
+<h2>User Details</h2>
+<div class="user-details">
+    <app-user-details *ngFor="let user of userDetails" [userItem]="user"></app-user-details>
+</div>
+    

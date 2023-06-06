@@ -1,0 +1,16 @@
+<ul class="user-list">
+    <li class="user-list__item">
+        <label class="user-list__item__label">User Name:</label>
+        <span class="user-list__item__value">{{userItem.name}}</span>
+    </li>
+    <li class="user-list__item">
+        <label class="user-list__item__label">User Email:</label>
+        <span class="user-list__item__value">
+            <a href="emailto:{{userItem.email}}">{{userItem.email}}</a>
+        </span>
+    </li>
+    <li class="user-list__item">
+        <label class="user-list__item__label">User Phone:</label>
+        <span class="user-list__item__value">{{userItem.phone}}</span>
+    </li>
+</ul>

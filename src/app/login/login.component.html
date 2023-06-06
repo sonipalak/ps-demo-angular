@@ -1,0 +1,44 @@
+<a href="javascript:void()" routerLink="">Back to Dashboard</a>
+<!-- Sign In Form -->
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-field">
+        <label for="username">Email address</label>
+        <div class="input-text-field">
+            <input type="email" class="input-field" placeholder="name@example.com" formControlName="email"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <span *ngIf="f.email.errors.required">Email is required</span>
+                <span *ngIf="f.email.errors.email">Email must be a valid email address</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-field">
+        <label for="password">Password</label>
+        <div class="password-field">
+            <i matSuffix (click)="hide = !hide" class="{{hide ? 'far fa-eye' : 'far fa-eye-slash'}}"></i>
+            <input class="input-field" #name value="" [type]="hide ? 'password' : 'text'" name="userName"
+                placeholder="Password" formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" required>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <span *ngIf="f.password.errors.required">Password is required</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+        <label class="form-check-label" for="rememberPasswordCheck">
+            Remember password
+        </label>
+    </div>
+
+    <div class="d-grid">
+        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+        <div class="text-center">
+            <a class="small" href="#">Forgot password?</a>
+        </div>
+    </div>
+
+</form>

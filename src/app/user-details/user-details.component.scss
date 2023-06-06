@@ -1,0 +1,27 @@
+.user-list{
+    margin: 0 0 0 0;
+    padding: 30px;
+    list-style: none;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    border:#cecece solid 1px;
+    border-radius: 12px;
+    &__item{
+        &__label{
+            font-size: 12px;
+            display: block;
+        }
+        &__value{
+            font-size: 16px;
+            font-weight: 600;
+            a{
+                color:#212121;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
