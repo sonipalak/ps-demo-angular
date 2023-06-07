@@ -3,6 +3,7 @@
     <input type="text" placeholder="Search People" [(ngModel)]="searchPeople">
 </div>
 <ul class="user-list">
+    <li><a href="javascript:void()" routerLink="">Back to Dashboard</a></li>
   <li class="user-list__item" *ngFor="let person of people  | filter: searchPeople">
     <div class="user-list__avtar">
       <img [src]="person.picture.medium" alt="Profile Picture">
