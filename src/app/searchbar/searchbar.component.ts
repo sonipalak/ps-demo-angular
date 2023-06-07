@@ -17,10 +17,16 @@ export class SearchbarComponent {
     this.fetchPeopleData();
   }
 
+
+  // fetchPeopleData(): void {
+  //   const apiUrl = 'https://randomuser.me/api/?results=20&inc=name,picture,id,cell&nat=in';
+  //   this.http.get(apiUrl).subscribe((data: any) => {
+  //     this.people = data.results;
+  //   });
+  // }
+
   fetchPeopleData(): void {
-    const apiUrl = 'https://randomuser.me/api/?results=20&inc=name,picture,id,cell&nat=in';
-    //const apiUrl = 'results.json?results=20&inc=name,picture,id,cell&nat=in';
-    this.http.get(apiUrl).subscribe((data: any) => {
+    this.http.get('assets/json/people.json').subscribe((data: any) => {
       this.people = data.results;
     });
   }
