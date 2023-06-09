@@ -1,22 +1,17 @@
-<div class="searchbar">
-  <input class="chat--search" type="text" placeholder="Search People" [(ngModel)]="searchPeople" (input)="searchPeopleResults()">
-</div>
-
-<ul class="user-list">
-  <li *ngIf="isLoading" class="chat--status-text loading">Loading people</li>
-  <li class="user-list__item" *ngFor="let person of people  | filter: searchPeople">
-    <div class="user-list__avtar">
-      <img [src]="person.picture.medium" alt="Profile Picture">
-    </div>
-    <div class="user-list__details">
-      <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
-      <span>{{ person.cell }}</span>
-    </div>
-  </li>
-  <li *ngIf="showNoResults" class="chat--status-text">No Result found</li>
-</ul>
-
-
-<!-- <div *ngIf="people.length === 0 && searchPeople.length > 0">
-  No data found.
-</div> -->
+<section class="chat--list__wrapper">
+  <article class="chat--search">
+    <h1 class="h1--head">Messages</h1>
+    <input class="chat--search__input" type="text" placeholder="Search People" [(ngModel)]="searchPeople" (input)="searchPeopleResults()">
+  </article>
+  <ul class="chat--list">
+    <li class="chat--status-loading" *ngIf="isLoading"></li>
+    <li class="chat--item" *ngFor="let person of people  | filter: searchPeople">
+      <div class="chat--item__left"><img [src]="person.picture.medium" alt="Profile Picture"></div>
+      <div class="chat--item__right">
+        <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
+        <p>{{person.cell}}</p>
+      </div>
+    </li>
+    <li class="chat--status-text" *ngIf="showNoResults">No Result found</li>
+  </ul>
+</section>
