@@ -35,6 +35,7 @@ import { FilterPipe } from './searchbar/filter.pipe';
     ReactiveFormsModule,
     HttpClientModule,
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

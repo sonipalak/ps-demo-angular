@@ -1,16 +1,22 @@
-
 <div class="searchbar">
-    <input type="text" placeholder="Search People" [(ngModel)]="searchPeople">
+  <input class="chat--search" type="text" placeholder="Search People" [(ngModel)]="searchPeople" (input)="searchPeopleResults()">
 </div>
+
 <ul class="user-list">
-    <li><a href="javascript:void()" routerLink="">Back to Dashboard</a></li>
+  <li *ngIf="isLoading" class="chat--status-text loading">Loading people</li>
   <li class="user-list__item" *ngFor="let person of people  | filter: searchPeople">
     <div class="user-list__avtar">
       <img [src]="person.picture.medium" alt="Profile Picture">
     </div>
     <div class="user-list__details">
-        <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
+      <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
       <span>{{ person.cell }}</span>
     </div>
   </li>
+  <li *ngIf="showNoResults" class="chat--status-text">No Result found</li>
 </ul>
+
+
+<!-- <div *ngIf="people.length === 0 && searchPeople.length > 0">
+  No data found.
+</div> -->

@@ -6,7 +6,7 @@
 <p>Product Price: {{price | currency: "INR"}}</p>
 <p>Date: {{today | date:'longDate'}}</p>
 
-<button class="" (click)="countAdd()" [ngClass]="status ? 'success' : 'danger'">Link | {{count}}</button>
+<button (click)="like()" [class.myClass]="isClassToggled">Like | {{ likeCount }}</button>
 
 
 <h1>Pass Date Child Component</h1>
