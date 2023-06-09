@@ -28,6 +28,14 @@ export class SearchbarComponent {
     });
   }
 
+  // fetchPeopleData(): void {
+  //   this.http.get('assets/json/people.json').subscribe((data: any) => {
+  //     this.people = data.results;
+  //     this.showNoResults = (this.people.length === 0);
+  //     this.isLoading = false;
+  //   });
+  // }
+
   searchPeopleResults() {
     this.showNoResults = this.people.filter(
       (person) =>
@@ -36,11 +44,7 @@ export class SearchbarComponent {
     ).length === 0;
   }
 
-  // fetchPeopleData(): void {
-  //   this.http.get('assets/json/people.json').subscribe((data: any) => {
-  //     this.people = data.results;
-  //   });
-  // }
+  
 
   
 
