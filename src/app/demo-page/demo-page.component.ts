@@ -20,7 +20,7 @@ updateVale(){
 
 productName = "iPhone"
 productPrice = 500
-productDetails = "Senior Web Designer seeking roles in ui development,ux design,web development,user interface designing,web designing,responsive web design,kendo ui,Bem Methodology,javascript,react.js,html,css3,jquery,angularjs,Layout Design,Project Management"
+productDetails = "Senior Web Designer seeking roles in ui development,ux design,web development,user interface designing."
 
 userDetails=[
   {name:'Astha Khan', email:'maraj.akanksha@hotmail.com', phone:'+91 02 01800091'},
@@ -38,5 +38,16 @@ countAdd(){
   this.status = !this.status;
   
 }
+
+likeCount: number = 100;
+isClassToggled: boolean = false;
+  like() {
+    this.likeCount++;
+    this.isClassToggled = !this.isClassToggled;
+  }
+
+
+
+
 
 }
