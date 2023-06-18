@@ -1,0 +1,23 @@
+.user-card{
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+    .card-body{
+        border:#cecece solid 1px;
+        border-radius: 12px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        h2{
+            padding: 0;
+            margin: 0;
+            font-size: 22px;
+            font-weight: 500;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

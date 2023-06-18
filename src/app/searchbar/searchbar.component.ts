@@ -39,14 +39,16 @@ export class SearchbarComponent {
   searchPeopleResults() {
     this.showNoResults = this.people.filter(
       (person) =>
+        person.name.title.toLowerCase().includes(this.searchPeople.toLowerCase()) ||
         person.name.first.toLowerCase().includes(this.searchPeople.toLowerCase()) ||
-        person.name.last.toLowerCase().includes(this.searchPeople.toLowerCase())
+        person.name.last.toLowerCase().includes(this.searchPeople.toLowerCase()) ||
+        person.cell.toLowerCase().includes(this.searchPeople.toLowerCase()) ||
+        person.id.name.toLowerCase().includes(this.searchPeople.toLowerCase()) ||
+        person.id.value.toLowerCase().includes(this.searchPeople.toLowerCase())
     ).length === 0;
   }
-
-  
-
-  
-
+  logPersonDetails(people: any) {
+    console.log(people);
+  }
 }
 

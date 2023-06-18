@@ -1,0 +1,29 @@
+.table--data{
+    width: 100%;
+    thead{
+        th{
+            text-align: left;
+            font-size: 16px;
+            border-bottom: #ebebeb solid 1px;
+            padding: 10px 0;
+        }
+    }
+    tbody{
+        td{
+            font-size: 16px;
+            border-bottom: #ebebeb solid 1px;
+            padding: 10px 0;
+            img{
+                border-radius: 100px;
+                width: 20px;
+                height: 20px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border:RGB(9, 113, 241) solid 3px;
+                object-fit: contain;
+            }
+        }
+    }
+}

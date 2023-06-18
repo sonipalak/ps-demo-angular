@@ -5,11 +5,11 @@
   </article>
   <ul class="chat--list">
     <li class="chat--status-loading" *ngIf="isLoading"></li>
-    <li class="chat--item" *ngFor="let person of people  | filter: searchPeople">
-      <div class="chat--item__left"><img [src]="person.picture.medium" alt="Profile Picture"></div>
+    <li class="chat--item" *ngFor="let person of people  | filter: searchPeople" (click)="logPersonDetails(person)">
+      <div class="chat--item__left"><img [src]="person.picture.large" alt="Profile Picture"></div>
       <div class="chat--item__right">
         <h2>{{person.name.title}}. {{person.name.first}} {{person.name.last}}</h2>
-        <p>{{person.cell}}</p>
+        <p>{{person.cell}} | {{person.id.name}}: {{person.id.value}}</p>
       </div>
     </li>
     <li class="chat--status-text" *ngIf="showNoResults">No Result found</li>

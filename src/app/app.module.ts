@@ -14,6 +14,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FilterPipe } from './searchbar/filter.pipe';
+import { TabeldataComponent } from './tabeldata/tabeldata.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FilterPipe } from './searchbar/filter.pipe';
     TemplateDrivenFormComponent,
     DashboardComponent,
     SearchbarComponent,
-    FilterPipe
+    FilterPipe,
+    TabeldataComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

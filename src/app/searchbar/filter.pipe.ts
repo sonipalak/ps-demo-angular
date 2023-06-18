@@ -14,7 +14,9 @@ export class FilterPipe implements PipeTransform {
         item.name.title.toLowerCase().includes(searchPeople) ||
         item.name.first.toLowerCase().includes(searchPeople) ||
         item.name.last.toLowerCase().includes(searchPeople) ||
-        item.cell.toLowerCase().includes(searchPeople)
+        item.cell.toLowerCase().includes(searchPeople) ||
+        item.id.name.toLowerCase().includes(searchPeople) ||
+        item.id.value.toLowerCase().includes(searchPeople)
     );
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -30,6 +30,8 @@ userDetails=[
   {name:'Nishi Datta', email:'sen.sushant@suri.com', phone:'065 12098442'},
   {name:'Teena Mogul', email:'divya.walia@patil.co.in', phone:'+91 27 25838178'}
 ]
+
+
 
 count = 100;
 status: boolean = true;
